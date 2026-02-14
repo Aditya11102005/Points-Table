@@ -211,7 +211,7 @@ def generate_scoreboard():
 
         output_path = os.path.join(BASE_DIR, OUTPUT_PATH)
         temp_path = output_path + ".tmp"
-        img.save(temp_path)
+        img.save(temp_path, format="PNG")
         os.replace(temp_path, output_path)
         print(f"Scoreboard saved to: {output_path}")
         _last_error = None
